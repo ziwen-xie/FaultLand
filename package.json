@@ -1,0 +1,14 @@
+{
+  "name": "endtimes-scavenger",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An offline, portable survival roguelike with cards and dice.",
+  "scripts": {
+    "start": "node server.cjs",
+    "mobile": "node server.cjs --lan",
+    "test": "node --test tests/engine.test.cjs",
+    "test:browser": "node tests/browser-smoke.cjs",
+    "catalog": "node tools/generate-catalog.cjs",
+    "check": "node --check content.js && node --check engine.js && node --check icons.js && node --check app.js && node --check tools/generate-catalog.cjs"
+  }
+}

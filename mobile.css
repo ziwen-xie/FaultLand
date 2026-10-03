@@ -1,0 +1,161 @@
+/* Touch layout: the same state, illustrated cards and readable phone typography. */
+.mobile-nav{display:none}body.dialog-open{overflow:hidden}button{touch-action:manipulation}
+@media(max-width:740px){
+  :root{--nav-height:68px;--safe-bottom:env(safe-area-inset-bottom,0px)}
+  html{scroll-padding-bottom:230px}
+  body{min-width:320px;padding-bottom:calc(var(--nav-height) + var(--safe-bottom) + 20px);font-size:15px}
+  body[data-mobile-view="explore"]{padding-bottom:calc(224px + var(--safe-bottom))}
+  .app-shell{padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+  .topbar{min-height:68px;padding:calc(9px + env(safe-area-inset-top,0px)) 12px 9px;gap:7px;border-bottom-width:3px}
+  .brand{gap:9px}.brand-mark{width:33px;height:39px}.brand-mark .ui-icon{width:24px;height:24px}
+  .brand-title{font-size:18px;letter-spacing:0;white-space:nowrap}.brand-en{font-size:10px;letter-spacing:.5px;margin-top:2px}
+  .header-right{gap:2px}.connection{display:none}.icon-button{min-width:44px;min-height:44px}
+  .subtle-button{font-size:12px;border:0;padding:6px 2px;background:transparent;min-height:44px;white-space:nowrap}
+  .subtle-button>span{display:none}.icon-button .ui-icon{width:22px;height:22px}
+  main{padding:14px 12px 0}.intro{min-height:113px;padding:14px 17px;margin-bottom:14px;border-radius:8px}
+  .intro-art{object-position:65% 50%}.intro-copy{max-width:78%}.intro .eyebrow{font-size:11px;padding:0;background:none}
+  h1{font-size:23px;line-height:1.4;margin:4px 0 0;letter-spacing:.5px}h1 span{display:block;margin:0}
+  .intro p{display:none}.world-clock{right:12px;bottom:13px;padding:4px 9px;border:0;background:#193b30d9}
+  .world-clock .day,.world-clock .day b{font-size:20px}.world-clock .day span{font-size:11px}
+  .world-clock .day span:last-child,.clock-detail{display:none}
+  .game-layout{display:flex;flex-direction:column;gap:14px}.left-column,.center-column,.right-column{display:contents}
+  .survivor-panel{order:0;flex-shrink:0;width:100%}.survivor-panel .panel-heading{display:none}
+  .identity{position:relative;gap:9px;padding:10px 12px 4px}.avatar{height:41px;width:39px;border-width:2px;transform:rotate(-3deg)}
+  .identity h3{font-size:14px;display:inline;margin-right:7px}.status-label{font-size:12px}.identity p{display:none}
+  .inventory-line{position:absolute;right:13px;top:14px;display:block;background:none;margin:0;padding:0}
+  .survivor-panel{position:relative}.inventory-line>span{display:none}.inventory-line strong{font-size:16px}
+  .vitals{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:8px 12px 13px}
+  .vital-header{display:block;margin-bottom:6px}.vital-title{font-size:12px;gap:4px;white-space:nowrap}
+  .symbol .ui-icon{width:17px;height:17px}.vital-number{font-size:18px;display:block;line-height:1.5;margin-top:3px}
+  .vital-number span{font-size:10px}.bar{height:6px}.survival-warning{font-size:12px;margin:0 12px 11px}
+  .map-panel{order:1;width:100%}.map-header{padding:14px 13px 8px;gap:8px}.map-header h2{font-size:21px;margin-top:2px;gap:7px}
+  .map-header .eyebrow{font-size:12px}.map-header h2 .ui-icon{width:22px;height:22px}
+  .zone-tag{font-size:11px;padding:4px 7px;gap:4px}.zone-tag .ui-icon{width:15px;height:15px}
+  .map-meta{padding:0 13px 4px;font-size:12px;gap:4px}
+  .map-wrap{padding:4px 10px 13px}.axis-x{font-size:11px;margin-bottom:6px}
+  .world-map{gap:5px}.tile{height:59px;min-height:44px;padding:5px 0;gap:4px;border-radius:4px}
+  .tile .glyph,.tile .glyph .ui-icon{width:27px;height:27px}.tile-name{font-size:12px;letter-spacing:0;line-height:1.2}
+  .tile-coord{display:none}.tile:not(.fog):hover{transform:none}.tile.selected{outline-width:2px;outline-offset:0}
+  .map-footer{padding:10px 12px;font-size:11px;gap:7px}.legend{gap:9px}.legend i{width:7px;height:7px;margin-right:4px}
+  .map-footer>span{font-size:12px}.map-footer b{font-size:12px}
+  .location-panel{position:fixed;left:max(8px,env(safe-area-inset-left,0px));right:max(8px,env(safe-area-inset-right,0px));bottom:calc(var(--nav-height) + var(--safe-bottom) + 7px);z-index:8;padding:12px 14px;min-height:0;background:#fffcf3;border:1px solid #bdc4ae;border-left:4px solid #b67242;box-shadow:0 -4px 24px #243e3221}
+  .location-top{gap:8px}.location-title{gap:9px}.location-icon{height:37px;width:37px}
+  .location-icon .glyph{height:26px;width:26px}.location-title h3{font-size:18px}.location-title .tiny{font-size:12px}
+  .location-tag{font-size:11px;padding:3px 6px}.location-panel>p{display:none}
+  .location-actions{display:grid;grid-template-columns:1fr;gap:6px;margin-top:9px}
+  .location-actions .primary-button{min-height:46px;font-size:14px;padding:9px 8px}
+  .location-actions .action-hint{font-size:12px;text-align:center;line-height:1.5}
+  .supply-panel,.mutation-panel,.deck-panel,.save-note,.objective-panel,.journal-panel{display:none}
+  body[data-mobile-view="inventory"] .supply-panel,body[data-mobile-view="inventory"] .mutation-panel,body[data-mobile-view="inventory"] .deck-panel,body[data-mobile-view="inventory"] .save-note{display:block;order:1;width:100%}
+  body[data-mobile-view="inventory"] .mutation-panel{order:2}body[data-mobile-view="inventory"] .deck-panel{order:3}
+  body[data-mobile-view="inventory"] .save-note{order:4;font-size:12px;padding:12px}
+  body[data-mobile-view="journal"] .objective-panel,body[data-mobile-view="journal"] .journal-panel{display:block;order:1;width:100%}
+  body[data-mobile-view="journal"] .journal-panel{order:2}
+  body:not([data-mobile-view="explore"]) .map-panel,body:not([data-mobile-view="explore"]) .location-panel{display:none}
+  .panel-heading{padding:16px 16px 0}.panel-heading h2{font-size:17px}.panel-heading .tiny{font-size:12px}
+  .supplies{padding:16px;gap:12px}.supply{min-height:113px;gap:5px;padding-top:10px}
+  .supply .supply-count{font-size:15px;top:4px;right:7px}.supply .supply-name{font-size:14px}
+  .supply .glyph{width:72px;height:72px}.workbench{min-height:50px;font-size:15px}
+  #mutations{padding:18px 16px}.mutation-empty{font-size:15px}.mutation-empty p{font-size:13px}
+  .mutation-row{font-size:15px;gap:12px;min-height:44px}.mutation-row .glyph{width:40px;height:40px}
+  .deck-preview{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;padding:14px 1px 0}
+  .mini-card{padding:12px;gap:8px}.mini-card .card-art{height:110px}.mini-card .glyph{height:110px;width:110px}
+  .mini-card strong{font-size:16px}.mini-card>span{font-size:12px}
+  .deck-caption{font-size:12px}.text-button{min-height:44px;font-size:14px;padding:6px}
+  .journal{max-height:none;padding-top:16px}.journal-entry p{font-size:15px}.journal-entry .time{font-size:12px}
+  .objective-panel{transform:none}.objective-panel>h3{font-size:20px}.objective-panel>p{font-size:15px}
+  .objective-next{font-size:14px}.objective-panel .signal-art{height:170px}.objective-progress{font-size:14px}
+  .core-slots{gap:15px}.core-slot{height:60px}.core-slot .glyph{height:51px;width:51px}
+  .footer,.quote{display:none}
+  .mobile-nav{position:fixed;bottom:0;left:0;right:0;z-index:10;display:grid;grid-template-columns:repeat(3,1fr);height:calc(var(--nav-height) + var(--safe-bottom));padding:5px max(12px,env(safe-area-inset-right,0px)) calc(5px + var(--safe-bottom)) max(12px,env(safe-area-inset-left,0px));background:#f9f7ef;border-top:1px solid #b9c4ae;box-shadow:0 -3px 13px #243e320d}
+  .mobile-nav button{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px;background:transparent;color:#5e715f;font-size:13px;min-height:48px;border-radius:7px;font-weight:500}
+  .mobile-nav .ui-icon{width:23px;height:23px}.mobile-nav button[aria-pressed="true"]{color:#fff5dc;background:#355c46}
+  .toast{bottom:calc(var(--nav-height) + var(--safe-bottom) + 12px);font-size:13px;max-width:calc(100% - 30px);padding:10px 15px}
+  body[data-mobile-view="explore"] .toast{bottom:calc(237px + var(--safe-bottom))}
+  dialog{width:100%;max-width:100%;height:100dvh;max-height:100dvh;margin:0;border:0;border-radius:0;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) 0 env(safe-area-inset-left,0px);overscroll-behavior:contain}
+  #modal-content{min-height:100%;display:flex;flex-direction:column}
+  .modal-head{padding:13px 15px;gap:8px;flex-shrink:0}.modal-head .eyebrow{font-size:11px;letter-spacing:.2px}
+  .modal-head h2{font-size:22px}.close-button{min-width:44px;min-height:44px}
+  .modal-body{padding:20px 16px;flex:1}.modal-copy,.help-grid p{font-size:15px}
+  .help-grid{grid-template-columns:1fr;gap:22px}.help-grid h3{font-size:17px}.help-note{font-size:14px}
+  .modal-footer{margin-top:auto;padding:12px 15px calc(12px + var(--safe-bottom));background:#e9edde;flex-shrink:0;gap:9px}
+  .primary-button,.secondary-button{min-height:46px;font-size:14px;padding:11px 14px}
+  .seed-input{font-size:16px;min-height:48px}.input-label{font-size:14px}
+  .recipe-list{grid-template-columns:1fr;gap:13px}.recipe{padding:14px;gap:15px}.recipe .glyph{width:70px;height:70px}
+  .recipe .secondary-button{min-height:44px;font-size:14px}.recipe h3{font-size:17px}.recipe p{font-size:13px}
+  .deck-full{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.deck-full .mini-card{padding:12px}
+  .deck-full .mini-card>span{font-size:13px}.deck-full .card-art,.deck-full .glyph{height:100px;width:100px}
+  .mutation-choices{grid-template-columns:1fr}.mutation-choice{min-height:110px;display:grid;grid-template-columns:54px 1fr;gap:4px 14px;padding:16px}
+  .mutation-choice .glyph{height:52px;width:52px;grid-row:1/3}.mutation-choice p{font-size:14px;grid-column:2}.mutation-choice h3{font-size:18px;margin:0}.mutation-choice small{grid-column:2}
+  .event-options{flex-direction:column}.event-options button{min-height:86px;font-size:16px}.event-options small{font-size:14px}
+  .ending{padding:24px 17px}.ending h3{font-size:25px}.ending p{font-size:15px}.end-stats{gap:32px}.end-stats strong{font-size:29px}
+  #modal[data-phase="combat"]{overflow:hidden}#modal[data-phase="combat"] #modal-content{height:100%;min-height:0}
+  #modal[data-phase="loot"]{width:100%}#modal[data-phase="loot"] .modal-footer{position:sticky;bottom:0}#modal[data-phase="loot"] .modal-footer button{width:100%}
+  .loot-item{gap:13px;padding:12px}.loot-item .glyph{width:72px;height:72px}.loot-item strong{font-size:18px}
+  .loot-item div>span{font-size:14px}.loot-saved,.loot-encounter{font-size:15px}
+  .combat-zone{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:0 12px;scroll-padding-top:124px}
+  .enemy-stage{padding:12px;gap:12px;border-radius:0 0 8px 8px}.enemy-art{width:78px;height:92px;border-width:3px}
+  .enemy-info .eyebrow{font-size:10px}.enemy-info h3{font-size:21px;margin:4px 0 8px}
+  .enemy-hp>span{font-size:13px}.enemy-intent{font-size:13px;line-height:1.65;margin-top:8px}
+  .combat-player{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 7px;font-size:13px;padding:12px 0}
+  .combat-player>.hp{grid-column:1;grid-row:1}.combat-player>.san{grid-column:2;grid-row:1}.combat-player>.armor{grid-column:3;grid-row:1}
+  .combat-meters{grid-column:1/-1;grid-row:2;font-size:12px}
+  .combat-player>button{grid-row:3;margin:0;min-height:44px;font-size:12px;padding:5px}
+  .dice-section{position:sticky;top:0;z-index:2;background:#f8f5eb;padding:14px 0;gap:9px;border-bottom:1px solid #d1d3bf;margin-bottom:13px}
+  .dice-label{font-size:15px;margin-bottom:12px}.dice-label>span{font-size:11px;margin-left:3px}
+  .die{height:49px;width:49px;padding:8px;gap:3px}.dice-tray{gap:11px}.pip{width:6px;height:6px}
+  .dice-tools .secondary-button{min-height:44px;padding:7px 9px;font-size:12px}.dice-tools p{font-size:11px}
+  .combat-hand{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(165px,45%);overflow-x:auto;gap:12px;padding:3px 2px 12px;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:#91a383 #e6e8db;overscroll-behavior-x:contain}
+  .combat-card{min-height:271px;padding:12px;scroll-snap-align:start;touch-action:pan-x pan-y}
+  .combat-card .card-art{height:105px}.combat-card .glyph{height:105px;width:105px}
+  .combat-card h3{font-size:18px}.card-desc{font-size:14px;line-height:1.7}.card-type{font-size:12px}.card-rule{font-size:12px}
+  .combat-card:not(:disabled):hover{transform:none}.combat-guide{font-size:13px;padding:7px 0 15px}
+  .combat-guide:before{content:"← 左右滑动，查看全部手牌 →";display:block;font-size:12px;color:#a75730;margin-bottom:6px}
+  .combat-log{flex-shrink:0;padding:11px 14px;font-size:13px;line-height:1.65;max-height:74px;overflow:auto}
+  #modal[data-phase="combat"] .modal-footer{display:grid;grid-template-columns:1fr 1.25fr;gap:8px}
+  #modal[data-phase="combat"] .modal-footer>.tiny{grid-column:1/-1;font-size:11px;line-height:1.5}
+  #modal[data-phase="combat"] .modal-footer>button{font-size:13px;padding:10px 6px;min-width:0}
+}
+@media(max-width:360px){
+  .brand-title{font-size:16px}.brand-en{font-size:10px}.brand{gap:7px}.subtle-button{font-size:11px}.header-right{gap:0}
+  .identity h3{font-size:13px;margin-right:4px}.status-label{font-size:11px}.inventory-line strong{font-size:14px}
+  .world-map{gap:4px}.map-wrap{padding-left:7px;padding-right:7px}.tile-name{font-size:11px}.tile{height:56px}
+  .map-meta{font-size:11px}.dice-tray{gap:7px}.die{height:44px;width:44px;padding:6px}
+  .dice-label>span{display:none}.dice-tools .secondary-button{font-size:11px;padding:6px 7px}
+  .combat-player{font-size:12px}.combat-player>button{font-size:11px}
+  #modal[data-phase="combat"] .modal-footer>button{font-size:12px}
+}
+@media(max-width:740px) and (max-height:500px) and (orientation:landscape){
+  .intro{display:none}.location-top{display:none}.location-actions{margin-top:0}
+  body[data-mobile-view="explore"]{padding-bottom:calc(180px + var(--safe-bottom))}
+  .modal-head{padding:7px 14px}.modal-head .eyebrow{display:none}.modal-head h2{font-size:19px}
+  .combat-log{max-height:45px;padding:6px 14px}#modal[data-phase="combat"] .modal-footer>.tiny{display:none}
+}
+@media(max-width:740px){.mobile-nav{grid-template-columns:repeat(4,1fr)}.desktop-achievements{display:none}}
+/* v0.3: compact cards, shared energy, active powers and collection shelves. */
+.energy-strip{padding:0 19px 15px;display:flex;align-items:center;gap:12px}.energy-strip>div{flex:1;min-width:0}.energy-strip .text-button{white-space:nowrap;font-size:12px}.energy-strip .vital-header{margin-bottom:5px}.energy-strip .vital-number{font-size:17px}.energy-strip .bar{height:6px}.power-meter{max-width:440px;margin-bottom:18px}.section-title{font-size:16px;color:#41634f;margin:22px 0 12px}.supplies{grid-template-columns:repeat(3,minmax(0,1fr))}.mutation-link{width:100%;background:transparent;text-align:left;min-height:48px}.mutation-link small{display:block;font-size:11px;color:#68705b}.deck-preview{grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}.mini-card{padding:8px 5px;gap:4px}.mini-card .card-art,.mini-card .glyph{height:65px;width:65px}.mini-card strong{font-size:13px}.deck-full{grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.deck-full .mini-card{min-height:178px;padding:10px}.deck-full .card-art,.deck-full .glyph{height:75px;width:75px}.deck-full .mini-card>span{font-size:12px}.combat-card{min-height:215px;padding:9px}.combat-card .card-art,.combat-card .glyph{height:72px;width:72px;margin-inline:auto}.combat-card h3{font-size:15px;margin:5px 0}.card-desc{font-size:13px;line-height:1.6}.card-rule{font-size:11px;padding-top:6px;margin-top:7px}.card-type{font-size:11px}.combat-hand{gap:9px}.battle-energy{display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:#e3e9d8;padding:9px 12px;border-radius:5px;margin-top:10px;font-size:14px}.battle-energy>span{display:flex;align-items:center;gap:6px}.battle-energy .ui-icon{width:22px;height:22px}.battle-energy button{margin-left:auto;padding:6px 10px;min-height:38px;font-size:12px}.dice-tray{flex-wrap:wrap}.ability-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:15px 0}.ability-card{display:flex;flex-direction:column;align-items:center;text-align:center;padding:12px 9px;border:1px solid #b8abc2;border-radius:7px;background:#eae2ec;gap:5px;color:#5c426b;min-height:142px}.ability-card .glyph{width:42px;height:42px}.ability-card strong{font-size:15px}.ability-card span,.ability-card small{font-size:12px}.ability-card:disabled{background:#e7e5df;border-color:#c7c8be;color:#737564}.ability-card:not(:disabled):hover{background:#e0d4e4;border-color:#765d84}.recover-card{background:#e3eadc;border-color:#b5c4a5;color:#416348}.pocket-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(125px,1fr));gap:10px}.pocket-card{display:flex;flex-direction:column;align-items:center;gap:5px;padding:12px 7px;flex:1;width:100%;background:#fff1ce;border:1px solid #c8a866;border-radius:6px;color:#735329;text-align:center;min-height:165px}.pocket-card .glyph{width:56px;height:56px}.pocket-card strong{font-size:14px}.pocket-card span{font-size:13px}.pocket-card small{font-size:11px}.pocket-card:disabled{background:#e7e7dc;color:#656d5a;border-color:#bfc5b0}.pocket-cards .text-button{font-size:12px;min-height:36px}.empty-pocket{grid-column:1/-1;font-size:13px;color:#617355;padding:16px;border:1px dashed #b8c7a7;border-radius:6px}.card-grip{font-size:18px;min-height:44px}.card-grip span{font-size:11px}.collection-tabs{display:flex;border-bottom:1px solid #bac3ac;margin-bottom:20px;gap:8px}.collection-tabs button{flex:1;padding:12px 8px;min-height:46px;background:#e7e9dc;border-radius:5px 5px 0 0;font-size:14px}.collection-tabs button[aria-pressed="true"]{background:#365e49;color:#fff5dc}.collection-count{font-size:15px;color:#65704f;margin-bottom:16px}.collection-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.collection-card{display:flex;flex-direction:column;align-items:center;padding:17px 10px;gap:9px;border:1px solid #c5b58a;background:#f4ebd4;border-radius:7px;text-align:center}.collection-card .glyph{width:67px;height:67px}.collection-card strong{font-size:15px}.collection-card span,.collection-card small{font-size:12px}.collection-card.undiscovered{background:#e5e7df;color:#697260;border:1px dashed #bac3b2}.collection-card.undiscovered .glyph{opacity:.5}.sell-list{display:flex;gap:10px;flex-wrap:wrap}.sell-list button{font-size:13px}.world-map.local-map{grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;max-width:560px;margin:auto}.local-map .tile{height:104px}.axis-x.local-axis{grid-template-columns:repeat(3,minmax(0,1fr));max-width:560px;margin-inline:auto}.region-exit{background:#e2e7d8;padding:12px 16px;border:1px solid #bec8ad;border-radius:6px;display:flex;align-items:center;gap:12px;font-size:13px}.region-exit[hidden]{display:none}.region-exit button{margin-left:auto;white-space:nowrap}.achievement-notice{display:none;position:fixed;inset:90px 15px auto auto;margin:0;width:min(340px,calc(100% - 30px));padding:15px 12px;border:1px solid #9e7b39;border-left:5px solid #b97934;border-radius:8px;background:#fff4ce;color:#4b552e;box-shadow:0 7px 24px #1d352c44;z-index:100;pointer-events:none}.achievement-notice:popover-open,.achievement-notice.visible{display:flex;gap:12px;align-items:center}.achievement-notice>.glyph{width:46px;height:46px;flex-shrink:0}.achievement-notice>div{flex:1;min-width:0}.achievement-notice span{font-size:11px;color:#936232;display:block}.achievement-notice strong{font-size:17px;display:block}.achievement-notice small{font-size:12px;display:block}.achievement-notice button{pointer-events:auto;width:44px;height:44px;flex-shrink:0;font-size:25px;background:transparent}.achievement-notice::backdrop{display:none}
+@media(max-width:740px){.energy-strip{padding:0 12px 11px;gap:14px}.energy-strip .vital-header{display:flex;align-items:center;margin-bottom:4px}.energy-strip .vital-number{font-size:15px;margin:0}.energy-strip .text-button{font-size:12px;min-height:40px}.energy-strip .symbol .ui-icon{height:17px;width:17px}.inventory-items{grid-template-columns:repeat(3,minmax(0,1fr))}.deck-preview{grid-template-columns:repeat(3,minmax(0,1fr))}.deck-full{grid-template-columns:repeat(3,minmax(0,1fr))}.deck-full .mini-card{min-height:167px;padding:8px 5px}.deck-full .card-art,.deck-full .glyph{width:62px;height:62px}.deck-full .mini-card>span{font-size:11px}.combat-hand{grid-auto-columns:minmax(120px,34%);gap:8px}.combat-card{min-height:226px;padding:8px}.combat-card .card-art,.combat-card .glyph{height:65px;width:65px}.combat-card h3{font-size:15px;line-height:1.4}.card-desc{font-size:13px;line-height:1.6}.card-rule{font-size:11px}.card-type{font-size:11px}.combat-zone{scroll-padding-top:130px}.enemy-art{width:59px;height:68px}.enemy-stage{padding:9px;gap:10px}.enemy-info h3{font-size:19px}.enemy-intent{font-size:12px;margin-top:5px}.combat-player{padding:8px 0;gap:4px}.battle-energy{gap:8px;font-size:12px;padding:7px;margin-top:6px}.battle-energy button{font-size:11px;padding:5px 6px;min-height:40px}.battle-energy .ui-icon{width:18px;height:18px}.dice-section{padding:10px 0}.die{width:42px;height:42px;padding:6px}.dice-tray{gap:8px}.dice-label{margin-bottom:10px}.ability-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.ability-card{padding:10px 6px;min-height:135px}.pocket-cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.pocket-card{padding:9px 4px;min-height:150px}.pocket-card strong{font-size:13px}.pocket-card span{font-size:12px}.pocket-card .glyph{width:47px;height:47px}.pocket-cards .text-button{font-size:11px}.collection-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.collection-tabs{gap:4px}.collection-tabs button{font-size:13px;padding:10px 4px}.region-exit{order:2;flex-direction:column;align-items:stretch;gap:9px;margin-bottom:10px}.region-exit button{margin:0;width:100%}.world-map.local-map{gap:10px}.local-map .tile{height:90px}.local-map .tile-name{font-size:14px}.achievement-notice{top:80px;right:10px;width:min(330px,calc(100% - 20px));padding:10px}.achievement-notice strong{font-size:16px}.achievement-notice small{font-size:11px}}
+
+/* v0.6: scalable achievement dashboard and searchable collection archive. */
+.collection-book{background:linear-gradient(180deg,#f8f4e8 0,#f5f2e9 100%)}
+.collection-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;border:0;margin-bottom:18px;padding:5px;background:#e2e6d9;border-radius:10px}
+.collection-tabs button{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:9px 12px;border:1px solid transparent;border-radius:7px;background:transparent;color:#596a59;font-size:14px}
+.collection-tabs button b{font-size:11px;font-variant-numeric:tabular-nums;padding:3px 7px;border-radius:20px;background:#cfd7c8;color:#49604c}
+.collection-tabs button[aria-pressed="true"]{background:#355d48;border-color:#284b3a;color:#fff7df;box-shadow:0 4px 12px #2946362b}
+.collection-tabs button[aria-pressed="true"] b{background:#fff4d9;color:#724b2d}
+.collection-dashboard{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:24px;padding:22px 25px;border:1px solid #c8c5a9;border-radius:12px;background:linear-gradient(135deg,#ecebdc,#f4ead3);box-shadow:inset 0 1px #fff9}
+.achievement-dashboard{background:linear-gradient(135deg,#e8edde,#f2e4cf)}
+.completion-ring{width:112px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:conic-gradient(#aa6338 var(--completion),#d8dac9 0);position:relative;box-shadow:0 4px 15px #3f553b1f}
+.completion-ring:before{content:"";position:absolute;inset:9px;border-radius:50%;background:#f9f5e9;border:1px solid #fff}
+.completion-ring>div{position:relative;text-align:center;z-index:1}.completion-ring strong{display:block;font-size:25px;color:#8e5031}.completion-ring span{font-size:11px;color:#65705d}
+.dashboard-copy .eyebrow{font-size:10px;letter-spacing:1px;color:#6b765e}.dashboard-copy h3{font-size:21px;line-height:1.4;margin:4px 0;color:#355643}.dashboard-copy p{font-size:13px;line-height:1.7;color:#65705d}
+.dashboard-metrics{display:flex;gap:8px;margin-top:13px}.dashboard-metrics>span{min-width:82px;padding:7px 10px;border-left:2px solid #a8ad8e;background:#fff9}.dashboard-metrics b{display:block;font-size:18px;color:#80502f}.dashboard-metrics small{font-size:10px;color:#68715e}
+.filter-stack,.collection-tools{display:grid;gap:10px;margin:18px 0 13px}.filter-row{display:flex;gap:7px;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}.filter-chip{flex:0 0 auto;min-height:38px;padding:8px 14px;border:1px solid #b9c1ad;border-radius:22px;background:#eef0e6;color:#4e6454;font-size:12px}.filter-chip[aria-pressed="true"]{background:#3b624d;border-color:#3b624d;color:#fff7e3}.filter-chip.secondary-filter[aria-pressed="true"]{background:#9b5b35;border-color:#9b5b35}
+.result-line{display:flex;justify-content:space-between;gap:15px;align-items:center;margin:14px 2px 8px;color:#68705c;font-size:12px}.result-line strong{font-size:14px;color:#3e5d49}
+.achievement-grid{margin-top:0}.achievement{align-items:stretch;gap:13px;padding:14px;border-radius:10px;background:#e9ebe2}.achievement-emblem{position:relative;width:58px;height:58px;flex:0 0 58px;display:grid;place-items:center;border-radius:50%;background:#d9ddd3;border:1px dashed #adb6a7}.achievement-emblem .glyph{width:44px;height:44px;filter:grayscale(1);opacity:.58}.achievement-emblem>span{position:absolute;right:-2px;bottom:-2px;width:21px;height:21px;display:grid;place-items:center;border-radius:50%;background:#747e6e;color:#fff;font-size:11px}.achievement-copy{flex:1;min-width:0}.achievement-title{display:flex;align-items:baseline;gap:8px}.achievement-title>span{flex:0 0 auto;font-size:9px;padding:3px 6px;border:1px solid #bec4b4;border-radius:12px;color:#6d7564}.achievement-title h3{font-size:16px}.achievement-copy p{font-size:12px;line-height:1.55;margin:5px 0 8px}.achievement-progress{display:flex;justify-content:space-between;gap:8px;font-size:10px;color:#68725f}.achievement-progress b{font-size:10px}.achievement.unlocked{background:linear-gradient(135deg,#f8efd9,#f1e4c5);border-color:#c4a76d}.achievement.unlocked .achievement-emblem{background:#fff2ce;border-style:solid;border-color:#c49a50}.achievement.unlocked .achievement-emblem .glyph{filter:none;opacity:1}.achievement.unlocked .achievement-emblem>span{background:#a66a32}.achievement.unlocked .achievement-title>span{border-color:#c9a96b;color:#8a592f}.achievement.unlocked progress{accent-color:#a76b32}
+.achievement>.achievement-emblem{flex:0 0 58px;min-width:58px}.achievement>.achievement-copy{flex:1;min-width:0}
+.rarity-ledger{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;margin:14px 0}.rarity-ledger button{padding:9px;border:1px solid color-mix(in srgb,var(--rarity-color) 32%,#c4c7b5);border-radius:8px;background:#f6f3e9;text-align:left}.rarity-ledger button[aria-pressed="true"]{box-shadow:0 0 0 2px var(--rarity-color);background:color-mix(in srgb,var(--rarity-color) 8%,#fff8e8)}.rarity-ledger span{font-size:10px;color:var(--rarity-color);font-weight:700}.rarity-ledger strong{float:right;font-size:11px;color:#536354}.rarity-ledger i{display:block;clear:both;height:4px;margin-top:8px;border-radius:5px;background:#d8dacf;overflow:hidden}.rarity-ledger i b{display:block;height:100%;background:var(--rarity-color)}
+.collection-search{display:flex;align-items:center;gap:9px;padding:0 12px;border:1px solid #aebaaa;border-radius:8px;background:#fffdf5}.collection-search .ui-icon{width:21px;height:21px;color:#58705e}.collection-search input{width:100%;min-height:46px;border:0;outline:0;background:transparent;color:#334c3d;font:inherit;font-size:14px}.collection-selects{display:flex;align-items:center;justify-content:space-between;gap:12px}.collection-selects>label{display:flex;align-items:center;gap:7px;font-size:11px;color:#66705d}.collection-selects select{min-height:38px;max-width:170px;padding:6px 28px 6px 9px;border:1px solid #b9c1ad;border-radius:7px;background:#f5f3e9;color:#3e5846}
+.collection-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.collection-card{min-height:180px;padding:15px 7px 12px;border-radius:9px;justify-content:flex-start}.collection-card[hidden]{display:none}.collection-art{height:62px;display:grid;place-items:center}.collection-card .collection-art .glyph{width:58px;height:58px}.collection-card strong{font-size:14px;line-height:1.4}.collection-card>span:not(.collection-art){font-size:10px;color:#66705c}.collection-card small{margin-top:auto;font-size:10px}.collection-card.collected:hover{transform:translateY(-2px);border-color:var(--rarity-color);box-shadow:0 7px 16px #314d3d1c}.collection-empty{grid-column:1/-1;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;border:1px dashed #b7bead;border-radius:10px;color:#6a7564}.collection-empty .glyph{width:58px;height:58px;opacity:.6}.collection-empty strong{font-size:15px}.collection-empty span{font-size:12px}
+@media(max-width:740px){.collection-book{padding:14px 12px 24px}.collection-tabs{position:sticky;top:70px;z-index:4;margin-inline:-2px}.collection-tabs button{min-height:44px;padding:7px 3px;gap:4px;font-size:12px}.collection-tabs button b{font-size:9px;padding:3px 5px}.collection-dashboard{gap:14px;padding:16px 14px}.completion-ring{width:84px}.completion-ring:before{inset:7px}.completion-ring strong{font-size:20px}.dashboard-copy h3{font-size:17px}.dashboard-copy p{font-size:11px;line-height:1.55}.dashboard-metrics{gap:4px}.dashboard-metrics>span{min-width:0;flex:1;padding:5px 6px}.dashboard-metrics b{font-size:15px}.filter-stack,.collection-tools{margin:14px 0 10px}.filter-row{margin-inline:-12px;padding-inline:12px}.result-line{align-items:flex-start}.result-line span{text-align:right}.rarity-ledger{display:grid;grid-auto-flow:column;grid-auto-columns:86px;grid-template-columns:none;overflow-x:auto;margin-inline:-12px;padding:3px 12px 6px}.collection-selects{align-items:flex-start;flex-direction:column}.collection-selects>label{width:100%;justify-content:space-between}.collection-selects select{flex:1;max-width:none}.collection-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.collection-card{min-height:166px;padding:13px 5px 10px}.collection-art{height:53px}.collection-card .collection-art .glyph{width:51px;height:51px}.achievement-grid{grid-template-columns:1fr}.achievement{padding:12px 10px}.achievement>.achievement-emblem{width:51px;height:51px;min-width:51px;flex-basis:51px}.achievement-emblem .glyph{width:39px;height:39px}.achievement-title h3{font-size:15px}}
+@media(max-width:360px){.collection-dashboard{grid-template-columns:1fr;text-align:center}.completion-ring{margin:auto}.dashboard-metrics{justify-content:center}.achievement-dashboard .dashboard-metrics{display:none}.collection-tabs button b{display:none}}

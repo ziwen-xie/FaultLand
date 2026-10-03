@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#263c35">
+  <meta name="description" content="我在末世捡垃圾，一款关于拾荒、异能、卡牌和骰子的末世生存 Roguelike。">
+  <title>我在末世捡垃圾</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mobile.css">
+  <script defer src="content.js"></script>
+  <script defer src="engine.js"></script>
+  <script defer src="icons.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body data-mobile-view="explore">
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="我在末世捡垃圾首页"><span class="brand-mark" data-icon="backpack"></span><span class="brand-title">我在末世捡垃圾<span class="brand-en">捡！狠狠捡！</span></span></a>
+      <div class="header-right"><button class="desktop-achievements subtle-button" data-action="achievements"><span data-icon="flag"></span>成就册</button><button class="icon-button" data-action="help" aria-label="玩法说明" data-icon="question"></button><button class="subtle-button" data-action="new"><span data-icon="refresh"></span>重新出发</button></div>
+    </header>
+    <main>
+      <section class="intro">
+        <img class="intro-art" src="assets/scene.png" alt="晨光照亮长满植物的废弃街道，远方矗立着信号塔" fetchpriority="high">
+        <div class="intro-copy"><span class="eyebrow">第七隔离区 · 拾荒日常</span><h1>今天，也要<span>满载而归。</span></h1><p>一罐食物，一把旧工具。明天就藏在这些破烂里。</p></div>
+        <div class="world-clock" id="world-clock"></div>
+      </section>
+      <div class="game-layout">
+        <aside class="left-column">
+          <section class="panel survivor-panel">
+            <div class="panel-heading"><h2>你的生存状态</h2><span class="tiny">拾荒者 07</span></div>
+            <div class="identity"><div class="avatar"><img src="assets/survivor.png" alt="戴着护目镜、背着背包的拾荒者"></div><div><h3>无名拾荒者</h3><span class="status-label">● <span id="survivor-status">尚存一息</span></span><p>还活着，就有机会。</p></div></div>
+            <div id="vitals" class="vitals"></div><div class="survival-warning" id="survival-warning"></div>
+            <div class="energy-strip"><div id="energy"></div><button class="text-button" data-action="powers">催发异能 →</button></div><div class="inventory-line"><span>制作零件</span><strong id="scrap"></strong></div>
+          </section>
+          <section class="panel supply-panel"><div class="panel-heading"><h2>口袋里的补给</h2><span class="tiny">点击使用</span></div><div id="supplies" class="supplies"></div><button class="workbench" data-action="craft"><span data-icon="wrench"></span>动手做点东西<span data-icon="arrow"></span></button></section>
+          <section class="panel mutation-panel"><div class="panel-heading"><h2>身体里的异能</h2><span class="tiny" id="mutation-count">0 / 30</span></div><div id="mutations"></div></section>
+          <div class="save-note" id="save-note">进度自动保存在本机</div>
+        </aside>
+        <section class="center-column">
+          <div class="panel map-panel">
+            <div class="map-header"><div><span class="eyebrow">下一站，去哪里？</span><h2><span data-icon="map"></span><span id="map-title">拾荒地图</span></h2></div><span class="zone-tag"><span data-icon="eye"></span>灰雾笼罩</span></div>
+            <div class="map-meta"><span id="coordinates"></span><span id="explored"></span></div>
+            <div class="map-wrap"><div class="axis-x"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span></div><div id="map" class="world-map" aria-label="第七隔离区地图"></div></div>
+            <div class="map-footer"><div class="legend"><span><i class="current"></i>你在这里</span><span><i class="reachable"></i>可以前往</span><span><i class="unknown"></i>未知区域</span></div><span>移动消耗 <b>3 饱食 · 4 水分 · 1 理智</b></span></div>
+          </div>
+          <div class="region-exit" id="region-exit" hidden></div><section class="panel location-panel" id="location"></section>
+          <section class="panel deck-panel"><div class="panel-heading"><h2>带上这些家当 <span id="deck-count"></span></h2><button class="text-button" data-action="deck">查看全部 →</button></div><div class="deck-preview" id="deck-preview"></div><p class="deck-caption">每回合 5 张手牌、3 枚骰子。破烂也能派上大用场。</p></section>
+        </section>
+        <aside class="right-column">
+          <section class="panel objective-panel">
+            <div class="panel-heading"><h2><span data-icon="flag"></span>给明天一个交代</h2><span class="tiny">主线</span></div>
+            <div class="signal-art"><img src="assets/scene.png" alt="废城远方的信号塔"><span class="mission-stamp">待完成</span></div>
+            <h3>找到离开这里的信号。</h3><p>从医院、地铁与电厂找回三枚核心，打开零号信号塔。</p><div id="cores" class="core-slots"></div><div class="objective-progress"><span>已收集核心</span><strong id="core-count"></strong></div><div class="objective-next" id="objective-next"></div>
+          </section>
+          <section class="panel journal-panel"><div class="panel-heading"><h2><span data-icon="journal"></span>今天的拾荒手记</h2><span class="live-dot"></span></div><div class="journal" id="journal" aria-live="polite"></div></section>
+          <div class="quote">“没用的东西，只是还没找到用法。”<span>— 写在避难所门口的一句话</span></div>
+        </aside>
+      </div>
+      <footer class="footer"><span>我在末世捡垃圾 <b>/</b> 希望，也可以一点点攒起来。</span><span id="seed-label"></span><span>生存手记 · v0.6</span></footer>
+    </main>
+  </div>
+  <nav class="mobile-nav" aria-label="游戏导航">
+    <button data-action="mobile-view" data-id="explore" aria-pressed="true"><span data-icon="map"></span>探索</button>
+    <button data-action="mobile-view" data-id="inventory" aria-pressed="false"><span data-icon="backpack"></span>背包</button>
+    <button data-action="mobile-view" data-id="journal" aria-pressed="false"><span data-icon="journal"></span>手记</button>
+    <button data-action="achievements"><span data-icon="flag"></span>成就</button>
+  </nav>
+  <dialog id="modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
+  <div id="achievement-notice" class="achievement-notice" role="status" aria-live="polite"></div><div id="survival-notice" class="survival-notice" role="alert" aria-live="assertive"></div><div id="toast" class="toast" role="status"></div>
+</body>
+</html>
